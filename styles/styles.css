@@ -1,0 +1,31 @@
+@import url('https://fonts.cdnfonts.com/css/tt-norms-pro');
+
+:root{
+    --oranje: #F7652D;
+}
+
+*{
+    font-family: 'TT Norms Pro', sans-serif;
+}
+
+/* .text-warning{
+    color: #F7652D;
+} */
+
+#section-destaques{
+    background-color: #0F2E4B;
+    color: #fff;
+}
+
+.card-highlight{
+    height: 290px;
+    background: none;
+    color: #fff;
+    border-color: #AEADAC;
+}
+
+.access-button{
+    font-weight: bold;
+    color: var(--oranje) !important;
+    text-decoration: underline;
+}
