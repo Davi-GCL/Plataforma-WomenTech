@@ -8,9 +8,18 @@
     font-family: 'TT Norms Pro', sans-serif;
 }
 
+body{
+    margin: 0;
+}
+
 /* .text-warning{
     color: #F7652D;
 } */
+
+#section-questoes{
+    background-color: #0F2437;
+    color: #fff;
+}
 
 #section-destaques{
     background-color: #0F2E4B;
