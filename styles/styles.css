@@ -13,11 +13,13 @@
 }
 
 *{
-    font-family: 'OpenSans';
+    font-family: 'OpenSans','Arial';
+    color: #FFF;
 }
 
 body{
     margin: 0;
+    background-color: #1E1E1E;
 }
 
 /* .text-warning{
@@ -25,13 +27,14 @@ body{
 } */
 
 #section-questoes{
-    height: 775px;
+    min-height: 775px;
     background-color: var(--bg-dark);
     color: #fff;
 }
 
 #title-questoes{
     color: var(--sub-title);
+    font-weight:bold;
     margin-bottom: 75px;
 }
 
@@ -40,20 +43,39 @@ body{
 } */
 
 #section-destaques{
-    height: 775px;
+    min-height: 775px;
     background-color: var(--bg-light);
     color: #fff;
 }
 
+.container-highlight{
+    padding: 91px 15px;
+    
+}
+
+.subtitle{
+    color: var(--sub-title);
+    font-weight:bold;
+}
+
 .card-highlight{
     height: 290px;
+    padding: 0.5rem;
     background: none;
     color: #fff;
     border-color: var(--border);
 }
 
+.card-footer{
+    border-top: none;
+}
+
 .access-button{
     font-weight: bold;
     color: var(--oranje) !important;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+}
+
+.text-body-secondary{
+    color: var(--sub-title) !important;
 }
