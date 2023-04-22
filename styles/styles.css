@@ -5,9 +5,10 @@
 }
 
 :root{
-    --oranje: #F7652D;
-    --bg-dark: #0F2437;
-    --bg-light: #0F2E4B;
+    --orange: #F7652D;
+    --bg-darker: #0F2437;
+    --bg-dark: #0F2E4B;
+    --bg-light: #E2DFD6;
     --sub-title: #A6A6A6;
     --border: #AEADAC;
 }
@@ -22,13 +23,21 @@ body{
     background-color: #1E1E1E;
 }
 
-/* .text-warning{
-    color: #F7652D;
-} */
+.text-warning{
+    color: #F7652D !important;
+}
+
+#section-chamado{
+    background-color: var(--bg-light);
+}
+
+#section-chamado .container{
+    max-width: 1076px;
+}
 
 #section-questoes{
     min-height: 775px;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-darker);
     color: #fff;
 }
 
@@ -44,7 +53,7 @@ body{
 
 #section-destaques{
     min-height: 775px;
-    background-color: var(--bg-light);
+    background-color: var(--bg-dark);
     color: #fff;
 }
 
@@ -56,6 +65,10 @@ body{
 .subtitle{
     color: var(--sub-title);
     font-weight:bold;
+}
+
+a{
+    text-decoration: none;
 }
 
 .card-highlight{
@@ -72,10 +85,120 @@ body{
 
 .access-button{
     font-weight: bold;
-    color: var(--oranje) !important;
+    color: var(--orange) !important;
     /* text-decoration: underline; */
 }
 
 .text-body-secondary{
     color: var(--sub-title) !important;
 }
+
+
+/* PAGINA DE CURSOS */
+
+#hero-cursos{
+    min-height: 775px;
+    background-color: var(--bg-darker);
+    padding-top: 100px;
+}
+
+#divider-hero-cursos{
+    height: 87px;
+}
+
+.symbols-label{
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.btn-outline-warning{
+    border-color: var(--orange);
+    border-radius: 5px;
+    color: #FFF;
+}
+
+.btn-outline-warning:hover{
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: #FFF;
+}
+
+.btn-warning{
+    background-color: var(--orange);
+    border-color: var(--orange);
+    border-radius: 5px;
+    color: #FFF;
+}
+
+.btn-warning:hover{
+    background-color: #f7662d00;
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+#section-cursos{
+    background-color: var(--bg-dark);
+}
+
+.card-course{
+    border-color: var(--bg-darker);
+    transition: 0.3s ease;
+    --bg-card-body: var(--bg-darker);
+}
+
+.card-course:hover{
+    box-shadow: 4px 8px 12px 4px rgba(0, 0, 0, 0.2) !important;
+    --bg-card-body: var(--bg-dark);
+}
+
+.card-course .card-body{
+    color: #FFF;
+    background-color: var(--bg-card-body);
+}
+
+#section-parceiros{
+    background-color: var(--bg-light);
+    min-height: 380px;
+}
+
+.square{
+    width: 157px;
+    height: 77px;
+    background-color: #04461a;
+}
+
+
+/* PAGINA DE DEPOIMENTOS */
+
+#hero-depoimentos{
+    background-color: var(--bg-darker);
+}
+
+#section-depoimentos{
+    background-color: var(--bg-dark);
+    min-height: 775px;
+}
+
+.card-story{
+    padding: 0.5rem;
+    background: none;
+    color: #fff;
+    border-color: var(--border);
+}
+
+.title-story{
+    font-weight: 300;
+}
+
+/* ICONS STYLES */
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 150,
+    'GRAD' 0,
+    'opsz' 60;
+
+    font-size: 90px;
+    color: #FFF;
+  }
