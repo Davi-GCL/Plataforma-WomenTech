@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/tt-norms-pro');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700;800&display=swap');
 @font-face {
     font-family: 'OpenSans';
     src: url('./fontes/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
@@ -20,8 +21,66 @@
 
 body{
     margin: 0;
-    background-color: #1E1E1E;
+    background-color: #050a30;
 }
+
+.header-navbar{
+    background-color:#050a30;
+}
+
+.navbar{
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.navbar-brand img{
+    width: 80%;
+    max-width: 130px;
+}
+
+/* PAGINA INDEX */
+
+#hero-principal{
+    background-color: var(--bg-darker);
+}
+
+#hero-principal>.container>.row>*{
+    padding-right: 0px;
+}
+
+
+#hero-title{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    letter-spacing: -0.04em !important;
+    line-height: 0.94em !important;
+    color: var(--bg-light);
+}
+
+#hero-title span{
+    font-family: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    color: var(--orange);
+}
+
+#hero-subtitle{
+    color: var(--bg-light);
+}
+
+.lado-maior {
+    position: relative;
+    margin-left: 10%;
+  }
+
+#hero-title {
+    position: absolute;
+    top: 32%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+/* SECAO FAIXA BRANCA */
 
 .text-warning{
     color: #F7652D !important;
@@ -106,6 +165,10 @@ a{
     height: 87px;
 }
 
+#divider-hero{
+    height: 87px;
+}
+
 .symbols-label{
     color: var(--orange);
     font-weight: bold;
@@ -146,6 +209,7 @@ a{
     --bg-card-body: var(--bg-darker);
 }
 
+
 .card-course:hover{
     box-shadow: 4px 8px 12px 4px rgba(0, 0, 0, 0.2) !important;
     --bg-card-body: var(--bg-dark);
@@ -164,7 +228,8 @@ a{
 .square{
     width: 157px;
     height: 77px;
-    background-color: #04461a;
+    background-color: var(--bg-dark);
+    border-radius: 6px;
 }
 
 
@@ -190,7 +255,31 @@ a{
     font-weight: 300;
 }
 
+
+/* PAGINA DE LIVROS */
+#section-livros{
+    background-color: var(--bg-light);
+}
+
+.card-book{
+    border-color: var(--bg-darker);
+    transition: 0.3s ease;
+    --bg-card-body: var(--bg-darker);
+
+    background-color: var(--bg-card-body);
+}
+
+/* .card-book .card-body{
+    color: black !important;
+} */
+
+
+
 /* ICONS STYLES */
+
+/* hr{
+    margin-block-start: 0rem !important;
+} */
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -202,3 +291,28 @@ a{
     font-size: 90px;
     color: #FFF;
   }
+
+
+/* MEDIA QUERYES */
+
+@media (min-width: 1200px){
+    .display-1 {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 1200px){
+    .lado-maior {
+        margin-left: 0%;
+      }
+
+    #hero-title{
+        top: 32%;
+        left: 38%;
+    }
+
+    #divider-hero{
+        height: 40px;
+    }
+}
+

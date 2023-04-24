@@ -16,28 +16,55 @@
     <title>Depoimentos</title>
 
 </head>
-<body style="background-color: white;">
+<body>
+<!-- Fixed navbar -->
+<header class="fixed-top header-navbar">
+  <nav class="navbar navbar-expand-md navbar-dark py-1 px-3">
+    <a class="navbar-brand" href="./index.html"><img class="navbar-brand" src="./styles/imgs/LogoLogo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="./index.html" class="nav-link" aria-current="page">Início</a></li>
+          <li class="nav-item"><a href="./cursos.html" class="nav-link">Cursos</a></li>
+          <li class="nav-item"><a href="./depoimentos.html" class="nav-link">Depoimentos</a></li>
+          <li class="nav-item"><a href="./livros.html" class="nav-link">Livros</a></li>
+          <!-- <li class="nav-item"><a href="./areaempresas" class="nav-link">Para Empresas</a></li> -->
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- /Navbar -->
+
     <main>
         <section id="hero-depoimentos">
             <div class="px-4 pt-5 text-center container">
-                <h1 class="display-4 fw-bold my-5">Inspire-se em quem já faz carreira em Tecnologia</h1>
+                <h1 class="display-4 fw-bold my-5">Inspire-se em quem já passou pela Tecnologia</h1>
                 
                 <div class="overflow-hidden" >
                   <div class="container px-2 mb-4">
-                    <iframe width="830" height="449" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- <iframe width="830" height="449" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <a href="./styles/imgs/EC32A062-458C-44E5-A81C-CD7E732320F6.pdf">
+                      <img src="styles/imgs/linhatempo.JPG" alt="" width="830" height="449">
+                    </a>
                   </div>
                 </div>
               </div>
         </section>
         <!-- /hero-depoimentos -->
+
         <section id="section-depoimentos">
 
             <div class="container">
-                <div class="row">
-                    <h1 class="text-center my-5">Depoimentos</h1>
+                <div class="row py-5">
+                    <h1 class="text-center mb-3">Depoimentos</h1>
+                    <h4 class="text-center text-body-secondary">Selecionamos algumas frases de mulheres de dentro desse mercado</h4>
                 </div>
 
-                <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
               
                     <div class="col">
                       
@@ -82,24 +109,32 @@
                     </div>
       
                   </div>
+                  <!-- /row -->
+
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center my-5">
+                    <a href="./areaempresas.html" class="btn btn-outline-warning btn-lg px-4 me-md-2">Deixe o seu depoimento também</a>
+                  </div>
             </div>
+            <!-- /container -->
         </section>
 
     </main>
 
- <!-- Footer: -->
- <!-- <div class="container">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-      </ul>
-      <p class="text-center text-body-secondary">© 2023 Desenvolvido por Davi-GCL</p>
-    </footer>
-  </div> -->
+<!-- Footer -->
+<div class="container ">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="./cursos.html" class="nav-link px-2 text-body-secondary">Cursos</a></li>
+      <li class="nav-item"><a href="./depoimentos.html" class="nav-link px-2 text-body-secondary">Depoimentos</a></li>
+      <li class="nav-item"><a href="./livros" class="nav-link px-2 text-body-secondary">Livros</a></li>
+      <li class="nav-item"><a href="./areaempresas.html" class="nav-link px-2 text-body-secondary">Para Empresas</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2023 Desenvolvido por Davi-GCL  |  <a href="https://www.linkedin.com/in/davi-gabriel-gcl/" class="">Contate-me →</a></p>
+    
+  </footer>
+</div>
+<!-- /Footer -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
