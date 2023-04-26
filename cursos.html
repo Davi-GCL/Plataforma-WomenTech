@@ -88,103 +88,9 @@
     <section class="album py-5" id="section-cursos">
         <div class="container">
     
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4" id="main-courses">
             
-            <div class="col">
-              <div class="card shadow-sm card-course">
-                <img src="./styles/imgs/curso-img.jpg" max-height="225" class="card-img-top">
-                <div class="card-body">
-                  <h4 class="card-title">Trilha Crie um site simples</h4>
-                  <p class="card-text">Se você estiver interessado em iniciar o desenvolvimento Web. Esta trilha reúne seis cursos que podem auxiliar você nesta tarefa.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Programação</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Online</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-                <div class="card shadow-sm card-course">
-                  <img src="./styles/imgs/curso-img.jpg" max-height="225" class="card-img-top">
-                  <div class="card-body">
-                    <h4 class="card-title">Trilha Crie um site simples</h4>
-                    <p class="card-text">Se você estiver interessado em iniciar o desenvolvimento Web. Esta trilha reúne seis cursos que podem auxiliar você nesta tarefa.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Programação</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Online</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="col">
-                <div class="card shadow-sm card-course">
-                  <img src="./styles/imgs/curso-img.jpg" max-height="225" class="card-img-top">
-                  <div class="card-body">
-                    <h4 class="card-title">Trilha Crie um site simples</h4>
-                    <p class="card-text">Se você estiver interessado em iniciar o desenvolvimento Web. Esta trilha reúne seis cursos que podem auxiliar você nesta tarefa.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Programação</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Online</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="col">
-                <div class="card shadow-sm card-course">
-                  <img src="./styles/imgs/curso-img.jpg" max-height="225" class="card-img-top">
-                  <div class="card-body">
-                    <h4 class="card-title">Trilha Crie um site simples</h4>
-                    <p class="card-text">Se você estiver interessado em iniciar o desenvolvimento Web. Esta trilha reúne seis cursos que podem auxiliar você nesta tarefa.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Programação</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Online</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card shadow-sm card-course">
-                  <img src="./styles/imgs/curso-img.jpg" max-height="225" class="card-img-top">
-                  <div class="card-body">
-                    <h4 class="card-title">Trilha Crie um site simples</h4>
-                    <p class="card-text">Se você estiver interessado em iniciar o desenvolvimento Web. Esta trilha reúne seis cursos que podem auxiliar você nesta tarefa.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Programação</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Online</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card shadow-sm card-course">
-                  <img src="./styles/imgs/curso-img.jpg" max-height="225" class="card-img-top">
-                  <div class="card-body">
-                    <h4 class="card-title">Trilha Crie um site simples</h4>
-                    <p class="card-text">Se você estiver interessado em iniciar o desenvolvimento Web. Esta trilha reúne seis cursos que podem auxiliar você nesta tarefa.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Programação</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Online</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- Espaço para os cards adicionados por JavaScript -->       
 
           </div>
 
@@ -243,5 +149,90 @@
 <!-- /Footer -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<!-- Javascript -->
+<script>
+  const mainCourses = document.getElementById("main-courses");
+
+  const courses = [
+    {
+      id: 1,
+      title:"Trilha Crie um site simples",
+      desc:"Se você estiver interessado em iniciar o desenvolvimento Web. Esta trilha reúne seis cursos que podem auxiliar você nesta tarefa.",
+      types: ['Programação', 'Online'],
+      img: "./styles/imgs/curso-img.jpg",
+      url: "https://www.ev.org.br/cursos/crie-um-site-simples-usando-html-css-e-javascript"
+    },
+    {
+      id: 2,
+      title:"Big Data & Analytics",
+      desc:"A arte de transformar dados em informação é desbloquear o valor dos dados. Juntos, Big Data e Analytics (BDA) prometem transformar a maneira com que as empresas fazem negócios.",
+      types: ['Programação', 'Online'],
+      img: "./styles/imgs/curso-img.jpg",
+      url: "https://eucapacito.com.br/curso-ec/big-data-analytics/"
+    },
+    {
+      id: 3,
+      title:"Design Gráfico",
+      desc:"Ao testar convenções de estrutura de páginas, diferentes arranjos em colunas e opções pictóricas, o designer chega a visão da conceitualização do conteúdo que ele deseja transmitir.",
+      types: ['Programação', 'Online'],
+      img: "./styles/imgs/curso-img.jpg",
+      url: "https://eucapacito.com.br/curso-ec/design-grafico"
+    },
+    {
+      id: 4,
+      title:"Python",
+      desc:"A linguagem Python é considerada uma das melhores para iniciantes na programação, além de ser muito poderosa. Aprenda os principais recursos desta linguagem.",
+      types: ['Programação', 'Online'],
+      img: "./styles/imgs/curso-img.jpg",
+      url: "https://eucapacito.com.br/curso-ec/python"
+    },
+    {
+      id: 5,
+      title:"Introdução a Redes de Computadores",
+      desc:"Você aprenderá conceitos importantes sobre como as redes funcionam... tipos de redes, meios e formas de transmissão de dados, cabeamento estruturado, arquitetura de redes, protocolo TCP/IP, etc...",
+      types: ['T.I', 'Online'],
+      img: "./styles/imgs/curso-img.jpg",
+      url: "https://www.ev.org.br/cursos/introducao-a-redes-de-computadores"
+    },
+    {
+      id: 5,
+      title:"Fundamentos de TI: Hardware e Software",
+      desc:"O objetivo deste curso é apresentar os conceitos básicos da informática, os componentes dos computadores, os sistemas lógicos e as principais funções que envolvem o poder computacional.",
+      types: ['T.I', 'Online'],
+      img: "./styles/imgs/curso-img.jpg",
+      url: "https://www.ev.org.br/cursos/introducao-a-redes-de-computadores"
+    },
+  ];
+
+  courses.forEach((course) => {
+    if(course.id <= 6){
+      mainCourses.innerHTML += createCourse(course);
+    }
+  });
+
+  // let course = createCourse(curso);
+  // mainCourses.innerHTML += course;
+ 
+  function createCourse(obj){
+    let {id,title,desc,types,img,url} = obj;
+
+    return `<div class="col">
+              <a href="${url}" class="card shadow-sm card-course" id="${id}">
+                <img src="${img}" max-height="225" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title">${title}</h4>
+                  <p class="card-text">${desc}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">${types[0]}</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">${types[1]}</button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>` 
+  };
+
+</script>
 </body>
 </html>
