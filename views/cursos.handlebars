@@ -1,0 +1,116 @@
+<title>Cursos</title>
+
+</head>
+<body>
+
+{{>_navbar}}
+
+<!-- /Navbar -->
+ <main>
+    <section id="hero-cursos">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold lh-1 mb-4">Cursos</h1>
+                    <p class="lead fs-4 fw-medium">Nossa listagem com os melhores cursos para quem quer se capacitar em tecnologia sem pagar nada.</p>
+                    <div id="divider-hero-cursos"></div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="#section-cursos" class="btn btn-outline-warning btn-lg px-4 me-md-2 smoothScroll">Cursos Disponíveis</a>
+                    </div>
+                </div>
+                
+<!-- Lado direito do hero com os symbolos  -->
+                <div class="col-sm-8 col-lg-6">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-sm-4 text-center">
+                            <span class="material-symbols-outlined">
+                                payments
+                            </span>
+                            <p class="symbols-label">Cursos gratuitos</p>
+                        </div>
+                    </div>
+                    <!-- /row -->
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-sm-4 text-center">
+                            <span class="material-symbols-outlined">
+                                devices
+                            </span>
+                            <p class="symbols-label">Assista de Onde Quiser</p>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <span class="material-symbols-outlined">
+                                workspace_premium
+                            </span>
+                            <p class="symbols-label">Certificado digital</p>
+                          </div>
+                    </div>
+                    <!-- /row -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /hero -->
+
+    <section class="album py-5" id="section-cursos">
+        <div class="container">
+    
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4" id="main-courses">
+            
+            <!-- Espaço para os cards adicionados por JavaScript -->
+            {{#each cursos}}
+                <div class="col">
+                <a href="{{this.link}}" target="_blank" class="card shadow-sm card-course" id="{{this.id}}">
+                    <img src="{{this.img}}" max-height="225" class="card-img-top">
+                    <div class="card-body">
+                    <h4 class="card-title">{{this.nome}}</h4>
+                    <p class="card-text">{{this.desc}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">{{this.materia}}</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">{{this.modo}}</button>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </div>      
+            {{/each}}
+          </div>
+
+          
+
+          <div class="d-grid gap-2 d-md-flex justify-content-md-center my-5">
+            <a href="./cursos/todos" class="btn btn-warning btn-lg px-4 me-md-2">Veja Todos Cursos</a>
+          </div>
+
+        </div>
+        <!-- /container -->
+    </section>
+    <!-- /cursos -->
+
+    <section id="section-parceiros">
+        <div class="container">
+          <div class="row p-4 justify-content-center">
+            <h4 class="text-center text-dark fw-bold mb-4 mt-4">Parceiros de Conteúdo</h4>
+            <p class="text-center fw-bold text-dark" style="max-width: 80ch;">Com a colaboração de nossos parceiros, oferecemos conteúdos gratuitos e de qualidade, democratizando o conhecimento nas principais carreiras digitais.</p>
+          </div>
+
+          <div class="row flex-lg-row justify-content-between gy-2 px-4 pb-3 mt-3">
+            <div class="square">
+                <p class="text-center">Logo Parceiro</p>
+            </div>
+            <div class="square">
+                <p class="text-center">Logo Parceiro</p>
+            </div>
+            <div class="square">
+                <p class="text-center">Logo Parceiro</p>
+            </div>
+            <div class="square">
+                <p class="text-center">Logo Parceiro</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+ </main>

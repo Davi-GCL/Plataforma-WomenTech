@@ -1,0 +1,92 @@
+<title>Depoimentos</title>
+
+</head>
+<body>
+
+    {{>_navbar}}
+{{!-- /Navbar --}}
+<main>
+        <section id="hero-depoimentos">
+            <div class="px-4 pt-5 mt-5 text-center container">
+                <h1 class="display-4 fw-bold my-5">Inspire-se em quem já faz parte do ramo tecnológico</h1>
+                
+                <div class="overflow-hidden" >
+                  <div class="container px-2 mb-4">
+                    <iframe width="830" height="449" src="https://www.youtube.com/embed/mYKiWjPPslo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    <!-- <a href="./styles/imgs/EC32A062-458C-44E5-A81C-CD7E732320F6.pdf">
+                      <img src="styles/imgs/linhatempo.JPG" alt="" width="830" height="449">
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+        </section>
+        <!-- /hero-depoimentos -->
+
+        <section id="section-depoimentos">
+
+            <div class="container">
+                <div class="row py-5">
+                    <h1 class="text-center mb-3">Depoimentos</h1>
+                    <h4 class="text-center text-body-secondary">Selecionamos algumas frases de mulheres de dentro desse mercado</h4>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-2" style="justify-content:center">
+
+                    {{#each depoimentos}}
+
+                    <div class="col">
+                      
+                      <div class="card card-story">
+                      
+                        <div class="card-body">
+                          <h4 class="card-title text-center title-story">{{this.nome}}, <br>{{this.instituicao}}</h4>
+                          
+                          <q class="card-text">{{this.texto}}</q>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+
+                    {{/each}}
+      
+                    {{!-- <div class="col">
+                      
+                        <div class="card card-story">
+                      
+                        <div class="card-body">
+                          <h4 class="card-title text-center title-story">Joana Doe, CEO <br>Doe-Corporation</h4>
+                          
+                          <q class="card-text">Depoimentos são citações curtas das pessoas que curtem sua marca. É uma ótima forma de convencer os clientes a experimentar seus serviços.</q>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+      
+                    <div class="col">
+                      
+                        <div class="card card-story">
+                      
+                        <div class="card-body">
+                          <h4 class="card-title text-center title-story">Joana Doe, CEO <br>Doe-Corporation</h4>
+                          
+                          <q class="card-text">Depoimentos são citações curtas das pessoas que curtem sua marca. É uma ótima forma de convencer os clientes a experimentar seus serviços.</q>
+                        </div>
+                        
+                      </div>
+                      
+                    </div> --}}
+      
+                  </div>
+                  <!-- /row -->
+
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center my-5">
+                    <a href="/form" class="btn btn-outline-warning btn-lg px-4 me-md-2">Deixe o seu depoimento também</a>
+                  </div>
+            </div>
+            <!-- /container -->
+        </section>
+
+    </main>

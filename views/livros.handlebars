@@ -1,0 +1,81 @@
+    <title>Literaturas</title>
+
+</head>
+<body>
+
+    {{>_navbar}}
+
+ <main>
+    <section id="hero-cursos">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold lh-1 mb-4">Literatura</h1>
+                    <p class="lead fs-4 fw-medium">Nossas recomendações de livros que podem ajudar vocês mulheres a superar seus medos e se inspirar enquanto ingressam na tecnologia.</p>
+                    <div id="divider-hero-cursos"></div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="#section-livros" class="btn btn-outline-warning btn-lg px-4 me-md-2 smoothScroll">Indicações de Livros</a>
+                    </div>
+                </div>
+                
+<!-- Lado direito do hero com os symbolos  -->
+                
+            </div>
+        </div>
+    </section>
+    <!-- /hero -->
+
+    <section class="album py-5" id="section-livros">
+        <div class="container px-4">
+    
+          <div class="row d-flex justify-content-between">
+            
+            <!-- <div class="col">
+              <div class="card shadow-sm card-course">
+                <img src="./styles/imgs/livros/mulheres_tecnologia_vol1_rgb.jpg" max-height="225" class="card-img-top">
+                <div class="card-body">
+                  <h4 class="card-title">Trilha Crie um site simples</h4>
+                  <p class="card-text">Se você estiver interessado em iniciar o desenvolvimento Web. Esta trilha reúne seis cursos que podem auxiliar você nesta tarefa.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Programação</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Online</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            {{#each livros}}
+            <div class="card mb-5 card-book" id="{{this.id}}" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./styles/imgs/livros/{{this.img}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body book-
+                  summary">
+                    <h5 class="card-title">{{this.nome}}</h5>
+                    <p class="card-text text-body-secondary">{{this.desc}}</p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+
+          </div>
+
+          
+
+          <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-center my-5">
+            <button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Veja Todos Cursos</button>
+          </div> -->
+
+        </div>
+        <!-- /container -->
+    </section>
+    <!-- /livros -->
+
+ </main>
