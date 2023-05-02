@@ -1,14 +1,8 @@
 import express from 'express'
-// const express = require("express")
-const app = express();
-// const handlebars = require('express-handlebars');
 import handlebars from 'express-handlebars';
-
-// const bodyParser = require('body-parser');
-// const mysql = require('mysql2');
 import mysql from 'mysql2';
-// const path = require('path')
 import * as path from 'path';
+import { RecaptchaV2 } from 'express-recaptcha';
 
 import {PORT, 
     DB_HOST,
@@ -16,6 +10,11 @@ import {PORT,
     DB_PASSWORD,
     DB_NAME,
     DB_PORT} from './config.js';
+
+const app = express();
+
+//Criando uma instância do ReCaptcha RecaptchaV2(SUA_CHAVE_SITE, SUA_CHAVE_SECRETA) 
+const recaptcha = new RecaptchaV2('6LePQNMlAAAAADlNYYitmliBVCYHRr6h5AQgV0zR','6LePQNMlAAAAAEvt2fPT0zffP00GFkPhB0HisZCl');
 
 //Configuração do banco de dados com a lib 'mysql2'
 const conn = mysql.createPool({
@@ -80,33 +79,38 @@ const conn = mysql.createPool({
     })
 
     var envio = null; //Indica se o formulario já foi enviado, para exibir a mensagem de envio
+    var errouCaptcha = null;
 
     app.get('/form',(req,res)=>{
-        res.render('form',{envio:envio})
+        res.render('form',{envio:envio,cptcha:errouCaptcha})
         envio = null;
     })
 
-    // app.get('/form',(req, res) => {
-    //     res.sendFile(__dirname + '/public/formu.html');
-    //   });
 
-    app.post('/depoimentos/add',(req,res)=>{
-        //A funcao mysql.escape() 'escapa' valores recebidos via POST dos formularios, evitando SQL injection
-        const nome = mysql.escape(req.body.nome);
-        const email = mysql.escape(req.body.email);
-        const instituicao = mysql.escape(req.body.instituicao);
-        const texto = mysql.escape(req.body.texto);
 
-        //Executa a consulta SQL para inserir os dados no DB
-        conn.query('INSERT INTO comentarios (nome, email,instituicao,texto) VALUES(?,?,?,?)', [nome,email,instituicao,texto], (error, results)=>{
-            if(error){
-                res.send('Erro ao inserir dados'); console.log(error)
-            } else{
-                envio = 1; 
-                console.log(results);                 
-                res.redirect('/form')
-            }
-        })
+    app.post('/depoimentos/add',recaptcha.middleware.verify,(req,res)=>{
+        if(req.recaptcha.error){//O reCaptcha não foi respondido corretamente
+            errouCaptcha = true;
+            res.redirect('/form')
+        } else{ //O reCaptcha foi respondido corretamente
+            errouCaptcha = null;
+            //A funcao mysql.escape() 'escapa' valores recebidos via POST dos formularios, evitando SQL injection
+            const nome = mysql.escape(req.body.nome);
+            const email = mysql.escape(req.body.email);
+            const instituicao = mysql.escape(req.body.instituicao);
+            const texto = mysql.escape(req.body.texto);
+
+            //Executa a consulta SQL para inserir os dados no DB
+            conn.query('INSERT INTO comentarios (nome, email,instituicao,texto) VALUES(?,?,?,?)', [nome,email,instituicao,texto], (error, results)=>{
+                if(error){
+                    res.send('Erro ao inserir dados'); console.log(error)
+                } else{
+                    envio = 1; 
+                    console.log(results);                 
+                    res.redirect('/form');
+                }
+            })
+        }
         
     })
 

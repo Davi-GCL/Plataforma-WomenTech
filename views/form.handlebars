@@ -12,6 +12,9 @@
               {{#if envio}}
                 {{>_alert}}
               {{/if}}
+              {{#if cptcha}}
+                {{>_warning}}
+              {{/if}}
                 <form action="/depoimentos/add" method="post">
                     <div class="mb-3">
                       <label for="email" class="form-label text-dark">Email*</label>
@@ -33,7 +36,13 @@
                     <div class="mb-3">
                         <label for="texto" class="form-label text-dark">Texto*</label>
                         <input type="text" class="form-control" name="texto" placeholder="Digite aqui o que deseja nos enviar" required>
-                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                      <div class="g-recaptcha" data-sitekey="6LePQNMlAAAAADlNYYitmliBVCYHRr6h5AQgV0zR"></div>
+                    </div>
+
                     <button type="submit" class="btn btn-warning">Enviar</button>
                   </form>
             </div>
