@@ -1,0 +1,39 @@
+<title>Todos Cursos</title>
+
+</head>
+<body>
+
+{{>_navbar}}
+
+<!-- /Navbar -->
+<main>
+<section class="album py-5" id="section-cursos">
+        <div class="container">
+    
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4" id="main-courses">
+            
+            <!-- Espaço para os cards adicionados por JavaScript -->
+            {{#each cursos}}
+                <div class="col">
+                <a href="{{this.link}}" target="_blank" class="card shadow-sm card-course" id="{{this.id}}">
+                    <img src="{{this.img}}" max-height="225" class="card-img-top">
+                    <div class="card-body">
+                    <h4 class="card-title">{{this.nome}}</h4>
+                    <p class="card-text">{{this.desc}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">{{this.materia}}</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">{{this.modo}}</button>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                </div>      
+            {{/each}}
+          </div>
+   
+         
+        </div>
+        <!-- /container -->
+    </section>
+    <!-- /cursos -->
