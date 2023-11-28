@@ -74,9 +74,8 @@ body{
 
 #hero-title {
     position: absolute;
-    top: 32%;
-    left: 18%;
-    transform: translate(-50%, -50%);
+    top: 12%;
+    left: -20%;
     z-index: 1;
   }
 
@@ -330,7 +329,34 @@ a{
     background-color: #0f2e4b;
 }
 
-#hero-title{
-    transition: all 1s linear;
-    transition-delay: 0.3s;
+#hero-title, #cursos-hero-title, #cursos-hero-sub{
+    animation: textEmergeFromRight 2.6s normal;
+    animation-delay: 0.3s;
+}
+
+#hero-subtitle, #hero-paragraph{
+    animation: textEmergeFromLeft 2.6s normal;
+    animation-delay: 0.3s;
+}
+
+@keyframes textEmergeFromLeft {
+    from {
+        opacity: 0%;
+      transform: translateX(-8%);
+    }
+    to {
+        opacity: 100%;
+      transform: translateX(0px);
+    }
+}
+
+@keyframes textEmergeFromRight {
+    from {
+        opacity: 0%;
+        transform: translateX(20%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
 }
